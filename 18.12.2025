@@ -1,0 +1,81 @@
+import java.util.Scanner;
+
+class EvenOdd {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        if (num % 2 == 0)
+            System.out.println("The number is Even");
+        else
+            System.out.println("The number is Odd");
+    }
+}
+
+import java.util.Scanner;
+
+class Factorial {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+
+        int fact = 1;
+        for (int i = 1; i <= n; i++) {
+            fact = fact * i;
+        }
+
+        System.out.println("Factorial = " + fact);
+    }
+}
+
+
+import java.util.Scanner;
+
+class Palindrome {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        int original = num;
+        int reverse = 0;
+
+        while (num != 0) {
+            int digit = num % 10;
+            reverse = reverse * 10 + digit;
+            num = num / 10;
+        }
+
+        if (original == reverse)
+            System.out.println("Palindrome Number");
+        else
+            System.out.println("Not a Palindrome Number");
+    }
+}
+
+import java.util.Scanner;
+
+class LargestOfThree {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+        System.out.print("Enter third number: ");
+        int c = sc.nextInt();
+
+        if (a > b && a > c)
+            System.out.println("Largest number is: " + a);
+        else if (b > c)
+            System.out.println("Largest number is: " + b);
+        else
+            System.out.println("Largest number is: " + c);
+    }
+}
